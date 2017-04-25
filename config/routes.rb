@@ -7,8 +7,22 @@ Rails.application.routes.draw do
 
   get("/flexible/payment/:rate/:years/:principal", {:controller => "calculations", :action => "flexible_payment"})
 
+  get("flexible/random/:number", {:controller => "calculations", :action => "random"})
+
   get("/square/new", {:controller => "calculations", :action => "square_form"})
 
   get("/square/square_result", {:controller => "calculations", :action => "square_result"})
+
+  get("/square_root/new", {:controller => "calculations", :action => "root_form"})
+
+  get("/square_root/root_result", {:controller => "calculations", :action => "root_result"})
+
+  get("/payment/new", {:controller => "calculations", :action => "payment_form"})
+
+  get("/payment/payment_result", {:controller => "calculations", :action => "payment_result"})
+
+  get("/random/new", {:controller => "calculations", :action => "random_form"})
+
+  get("/random/random_result", {:controller => "calculations", :action => "random_result"})
 
 end

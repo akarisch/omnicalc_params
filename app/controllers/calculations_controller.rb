@@ -13,8 +13,12 @@ class CalculationsController <ApplicationController
   end
 
   def flexible_payment
-
-    @user_payment = "monthly payment goes here"
+    @user_rate = params[:user_rate].to_f
+    @user_years = params[:user_years].to_f
+    @user_principal = params[:user_principal].to_f
+    @monthly_rate = @user_rate/10000/12
+    @months = @user_years*12
+    @user_payment =(@monthly_rate*(@user_principal))/(1-(1+@monthly_rate)**(-@months))
     render("calculations/flexible_payment.html.erb")
   end
 

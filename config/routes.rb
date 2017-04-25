@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get("/flexible/square_root/:number", {:controller => "calculations", :action => "flexible_square_root"})
 
-  get("/flexible/payment/:rate/:years/:principal", {:controller => "calculations", :action => "flexible_payment"})
+  get("/flexible/payment/:user_rate/:user_years/:user_principal", {:controller => "calculations", :action => "flexible_payment"})
 
   get("flexible/random/:number", {:controller => "calculations", :action => "random"})
 

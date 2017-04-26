@@ -1,1 +1,1 @@
-<h3> "On a <%= @user_years.to_i %>-year loan with an interest rate of <%= @user_rate %> percent and beginning principal of <%= @user_principal/1000 %>k, you will owe <%= @payment.round(3) %> per month!" </h3>
+<h3> "On a <%= @user_years.to_i %>-year loan with an interest rate of <%= number_to_percentage(@user_rate) %> percent and beginning principal of <%= @user_principal/1000 %>k, you will owe <%= number_to_currency(@payment.round(2)) %> per month!" </h3>

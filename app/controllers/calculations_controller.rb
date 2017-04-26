@@ -63,7 +63,9 @@ class CalculationsController <ApplicationController
   end
 
   def random_result
-    @user_num = params[:user_num].to_f
+    @user_min = params[:user_min].to_i
+    @user_max = params[:user_max].to_i
+    @user_random = rand(@user_min..@user_max)
     render("calculations/random_result.html.erb")
   end
 
